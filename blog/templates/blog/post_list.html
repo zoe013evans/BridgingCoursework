@@ -3,11 +3,17 @@
 		<title>Zoe's website</title>
 	</head>
 	<body> 
-		<p> Hi there!</p>	
+		<p> Hi there!</p>
 
-		{% for post in posts %}
-			{{post}}
-		{% endfor %}
+{%for post in posts %}
+		<div>
+			<p>Published: {{ post.published_date}}</p>
+			<h2><a href="">{{post.title}}</a></h2>
+			<p>{{post.text|linebreaksbr}}</p>
+		</div>	
+
+
+{%endfor%}		
 
 	</body>
 </html>
