@@ -1,18 +1,9 @@
 
-{% load static %}
 
-<html> 
-	<head>
-		<title>Zoe's website</title>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% extends 'blog/base.html' %}
 
-	</head>
-	<body> 
-		<p> Hi there!</p>
 
-		<p> HELLO! </p> 
+{%block content}
 
 {%for post in posts %}
 		<div>
@@ -24,6 +15,5 @@
 
 {%endfor%}		
 
-	</body>
-</html>
+{% endblock %}
 
