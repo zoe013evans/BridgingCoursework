@@ -6,14 +6,33 @@
 {% block content %}
 
 {%for post in posts %}
-		<div>
-			<p>Published: {{ post.published_date}}</p>
-			<h2><a href="">{{post.title}}</a></h2>
-			<p>{{post.text|linebreaksbr}}</p>
-		</div>	
-
+		<div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
 
 {%endfor%}		
 
 {% endblock %}
+
+
+<!-- 
+
+	So, we want to have a link from a posts title in the post list to the actual post. 
+	So Post list is lowkey acting like a contents page. Cute. 
+
+
+	%% = django template tags
+
+	post_detail = Ah, there should be a url in blog/urls.py with a name post_detail
+
+	pk is short from primary key, a unique identifier for each record in a database. Django creates one for us because we don't specify it. 
+
+
+	
+
+	--> 
 
