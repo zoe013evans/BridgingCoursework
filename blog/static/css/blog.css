@@ -1,0 +1,74 @@
+
+
+
+/*Colours we're going to start with: 
+
+Main Background: #CBF3F0 -light light blue
+Maybe colour of the design - #57737A OR 85BDBF
+And then I really like this pink/Coral - FFA69E 
+Text: Dark Grey #34343;
+
+
+
+*/
+
+html{
+	box-sizing: boarder-box;
+	
+}
+*,*:before,*:after{
+	box-sizing:inherit;
+}
+
+a{
+	color: #343430;
+}
+
+
+
+body{
+	color: #34343;
+	margin:0;
+	padding:0;
+
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px; 
+	line-height: 1.5; 
+
+}
+
+
+
+header{
+
+	background: #FFA69E
+
+}
+
+h1{
+	font-size: 90px; 
+	color: #34343;
+}
+
+h2{
+	font-size: 40px;
+}
+
+h1, h2 {
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400; 
+	margin:0;
+}
+
+.content-wrap{
+	width: 800px;
+	margin: 0 auto; 
+	padding: 60px 0;
+
+}
+
+
+
+.websites{
+	background: #F7FFF7
+}
