@@ -8,6 +8,10 @@ from django.contrib.auth.decorators import login_required
 
 
 
+def main_page(request):
+	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+	return render(request, 'blog/mainpage.html', {'posts':posts})
+
 def post_list(request):
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 

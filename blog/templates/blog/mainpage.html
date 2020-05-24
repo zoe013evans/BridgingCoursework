@@ -1,7 +1,77 @@
-{%extends blog/base.html%}
+{% extends 'blog/base.html' %}
 
 
 
 {% block content %}
-<p>Hello!</p>
+
+
+<!-- *************** ABOUT PROFILE ************-->
+
+<section class="websites">
+	<div class="content-wrap">
+
+		<h2>Other websites</h2>
+
+	
+
+		<!-- Website 1	-->
+		<section class="website-item">
+			<h3>Artwork:</h3>
+			<p> Lol, here is my art instagram to check out: <a href="http://www.instagram.com/art_on_hold">instagram.com/art_on_hold</a>.</p>
+		</section>
+
+		<!-- Website 2	-->
+		<section class="website-item">
+			<h3>Zoe Evans - Linked In Profile:</h3>
+			<p> Heres a snazzy link to my linked in page. There's not much on there, cause I can't do much with my life ahahahahah: <a href="https://www.linkedin.com/in/zoe-evans-32a292197/" target="_blank">Zoe Evans, Linked In</a>.</p>
+		</section>
+
+		<!-- Website 3? -->
+
+		<section class="website-item">
+			<h3>Github</h3>
+			<p>There's not much on it right now, but you might as well have my github: <a href="https://github.com/zoe013evans">github.com/zoe013evans</a></p>
+		</section>
+
+	</div>
+</section>
+<!-- ********** LIKE, BLOG INFO PAGE ********* -->
+
+
+<section class="bloginfo">
+	<h2>Computer Science Blog</h2>
+	<div class="content-wrap">
+		<section class="bloginfotext">
+			<p> Due to the impact of miss corona on my third term of university studies, I wasn't able to complete this years exams. In order to fill our time and justify taking the 3 grand from us to pay for this term, and I suppose to learn some skills, we've been tasked with making a website using Django.</p>
+			<p>On this website is a riverting blog detailing some of my experiences of this year, thoughts for the future, and a bit of technical explination of Django. Was I forced to write about these supppppper interesting topics? You decide. </p>
+			<p>Anyway heres the blog: <a href="{% url 'post_list' %}">Computer Science Blog</a></p>
+			</section>
+	</div>
+</section>
+
+<!-- *********** ABOUT MY ART STUFF ***********-->
+
+<section class="artprojects">
+	<h2>Art Stuff</h2>
+	<div class="content-wrap">
+		<p> I'm also an artist, working on a variety of projects. It's not really relevant is it but it adds a bit of spark to the personality lol!</p>
+		<p>I have nothing else to adddddddddd</p>
+	</div>
+</section>
+
+<!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
+      <section class="education">
+
+        <div class="content-wrap">
+          <h2>Education</h2>
+
+          <section>
+            <h3>University Of Birmingham</h3>
+            <p>Bsc Computer Science</p>
+            <p>I am currently a student at the university of Birmingham, having just finished my second year. </p>
+          </section>       
+        </div>
+      </section>
+
 {% endblock %}
+

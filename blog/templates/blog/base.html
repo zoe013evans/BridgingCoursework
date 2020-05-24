@@ -1,11 +1,13 @@
-{% load static % }
-
 <html>
 	<head>
-		<title>Zoe's Blog wooeee</title>
+		<title>Zoe Evans</title>
 		 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Raleway&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" type="text/css" href="/../../static/css/blog.css">
 
         
 	</head>
@@ -18,7 +20,17 @@
 			{% else%}
 				<a href="{% url 'login'%}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
 			{% endif %}
-			<h1><a href="/">Zoes blog woo</a></h1>
+
+			<header>	
+				<div class="content-wrap">		
+					<h1><a href="/">Zoe Evans</a></h1>
+					<h2>A sad computer science student</h2>
+					<p>Not only am I a sad computer science student, I'm also a struggling artist ahaha. And a woman. At least I'm white.</p>
+
+				</div>
+			</header> 
+
+
 		</div> 
 		<div class = "content container">
 			<div class="row">
