@@ -25,9 +25,12 @@ class NewVisitorTest(unittest.TestCase):
 		self.browser.get('http://localhost:8000')
 
 
-		self.assertIn('To-Do', self.browser.title)
+		self.assertIn('Zoe Evans', self.browser.title)
+		#
 		self.fail('Finish the test!')
-
+		#Fails no matter what. 
 
 if __name__ == '__main__':
 	unittest.main(warnings='ignore')
+	#This is how a python script checks it's been executed
+	#from the commandline, rather than another script. 
