@@ -15,3 +15,18 @@ class CVPageTest(TestCase):
 #what view function they should map to. 
 #In the tutorial it wanted to resolve to root, but we already have a
 #root, so we'll resolve to a CV page. 
+
+
+	def test_cv_page_returns_correct_html(self):
+		request = HttpRequest()
+#A request object is what Django see's when the user
+#browser asks for a page. 
+		response = cv(request)
+#Pass it our cv page view, which gives us a response. 
+		html = response.content.decode('utf8')
+		self.assertTrue(html.startswith('<html>'))
+		self.assertIn('<title>Cv Page</title>', html)
+		self.assertTrue(html.strip().endswith('</html>'))
+
+		#self.assertTemplateUsed(response, 'cv.html')
+

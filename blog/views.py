@@ -4,6 +4,7 @@ from django.utils import timezone
 from .forms import PostForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 # Create your views here.
 
 
@@ -82,5 +83,5 @@ def post_remove(request, pk):
 	return redirect('post_list.html')
 
 
-def cv():
-	pass
+def cv(request):
+	return render(request, 'blog/cv.html')
