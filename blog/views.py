@@ -84,4 +84,8 @@ def post_remove(request, pk):
 
 
 def cv(request):
-	return render(request, 'blog/cv.html')
+	return render(request, 'blog/cv.html', {
+		'new_item_text': request.POST.get('item_text', ''),
+		})
+
+	

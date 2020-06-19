@@ -1,11 +1,20 @@
+{% load static %}
 <html>
 	<head>
+
+		 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
 		<title>Cv Page</title>
+
 	</head>
 	<body>
 		<h1>Cv Page</h1>
-		<input id="id_new_item" placeholder="Enter a to-do item" />
+		<form method="POST">
+			<input id="id_new_item" placeholder="Enter a to-do item" />
+			{% csrf_token %}
+		</form>
 		<table id="id_list_table">	
+			<tr><td>{{ new_item_text }}</td></tr>
 		</table>
 	</body>
 </html>

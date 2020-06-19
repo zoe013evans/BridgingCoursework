@@ -45,6 +45,10 @@ header{
 
 }
 
+head{
+	background: #FFA69E
+}
+
 h1{
 	font-size: 90px; 
 	color: #34343;
@@ -81,3 +85,36 @@ header, h2{
 }
 
 
+footer{
+	background: #FFA69E;
+	text-align: center;
+}
+
+
+.contact-list{
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+
+
+}
+
+.contact-list a{
+	padding: 15px;
+	display: inline-block;
+}
+
+
+.page-header{
+	margin: ;
+	border: 0;
+	padding: 0;
+	padding-bottom: 0.5; 
+}
+
+.top-menu{
+	width: 800;
+	
+	background: #FFA69E;
+} 
