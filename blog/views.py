@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.utils import timezone
 from .forms import PostForm
+from .forms import ProjectForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
@@ -84,8 +85,27 @@ def post_remove(request, pk):
 
 
 def cv(request):
-	return render(request, 'blog/cv.html', {
-		'new_item_text': request.POST.get('item_text', ''),
-		})
+	return render(request, 'blog/cv.html')
 
+def project_detail(request, pk): 
+	project = get_object_or_404(Projects, pk = pk)
+	return render(request, 'blog/project_detail.html', {'project': projects})		
 	
+
+
+
+
+
+
+
+
+def projects_new(request):
+	if request.method == "POST":
+		form = ProjectForm(request.POST)
+		if form.is_valid():
+			project = form.save(commit=False)
+			project.date = timezone.now()
+			project.save()
+			return redirect('cv')
+	else: 
+		form = ProjectForm

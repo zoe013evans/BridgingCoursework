@@ -27,3 +27,16 @@ class Post(models.Model):
 		
 
 
+class Education(models.Model):
+	start_date = models.DateTimeField()
+	end_date = models.DateTimeField()
+	text = models.TextField()
+	
+
+	
+
+
+
+class Projects(models.Model): 
+	date = models.DateTimeField()
+	text = models.TextField()

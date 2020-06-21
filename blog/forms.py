@@ -1,6 +1,8 @@
 from django import forms 
 
 from .models import Post 
+from .models import Projects
+from .models import Education
 
 class PostForm(forms.ModelForm):
 
@@ -20,3 +22,12 @@ class PostForm(forms.ModelForm):
 
 #Meta is for telling Django which model should
 #be used to create the form. Obvi Post. 
+
+class ProjectForm(forms.ModelForm):
+
+	class Meta: 
+		model = Projects
+		fields = ('text',)
+
+
+
