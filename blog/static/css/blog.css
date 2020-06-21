@@ -119,3 +119,26 @@ footer{
 	
 	background: #FFA69E;
 } 
+
+
+/* *************CV STUFF**************** */ 
+
+/* Work Experience */
+
+.job-item{
+	display: grid;
+	grid-template-columns: 2fr 3fr; 
+	column-gap: 35px;
+}
+
+.project-item{
+	display: grid;
+	grid-template-columns: 2fr 3fr; 
+	column-gap: 35px;
+}
+
+.education-item{
+	display: grid;
+	grid-template-columns: 2fr 3fr; 
+	column-gap: 35px;
+}
