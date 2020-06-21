@@ -1,11 +1,16 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
+from .models import Project
 from django.utils import timezone
 from .forms import PostForm
 from .forms import ProjectForm
+from .models import Education
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from itertools import chain 
+from .models import Section
+from .models import cvSection
 # Create your views here.
 
 
@@ -85,7 +90,10 @@ def post_remove(request, pk):
 
 
 def cv(request):
-	return render(request, 'blog/cv.html')
+	education = Education.objects.filter(end_date__lte=timezone.now()).order_by('end_date')
+	project = Project.objects.filter(date__lte=timezone.now()).order_by('date')
+	section = cvSection.objects.filter(date_end__lte=timezone.now())
+	return render(request, 'blog/cv.html', {'section':section})
 
 def project_detail(request, pk): 
 	project = get_object_or_404(Projects, pk = pk)

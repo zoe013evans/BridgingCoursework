@@ -33,10 +33,27 @@ class Education(models.Model):
 	text = models.TextField()
 	
 
+	def publish(self):
+		self.save()
+
 	
 
 
 
-class Projects(models.Model): 
+class Project(models.Model): 
 	date = models.DateTimeField()
 	text = models.TextField()
+
+
+class Section(models.Model):
+	date_start = models.DateField()
+	date_end = models.DateField()
+	title = models.CharField(max_length=200)
+	text = models.TextField()
+	
+class cvSection(models.Model):
+	date_start = models.DateField()
+	date_end = models.DateField()
+	title = models.CharField(max_length=200)
+	detail = models.TextField()
+	section_type = models.TextField()
