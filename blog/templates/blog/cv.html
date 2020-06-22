@@ -71,9 +71,11 @@
 	<div class="content-wrap">
 		<h3>Skills</h3>
 		{%for section in section%}
+		<ul class="skills-list">
 			{% if section.section_type == 'skills'%}
-				<p>{{ section.detail}}</p>
+				<li>{{ section.detail}}</li>
 			{% endif %}
+		</ul>
 		{% endfor %}
 	</div>
 </div>

@@ -142,3 +142,12 @@ footer{
 	grid-template-columns: 2fr 3fr; 
 	column-gap: 35px;
 }
+
+.skills-list{
+	list-style-type: none;
+	padding: 0;
+	display: inline-flex;
+	justify-content: space-between 30px;
+
+
+}
