@@ -45,6 +45,10 @@ header{
 
 }
 
+head{
+	background: #FFA69E
+}
+
 h1{
 	font-size: 90px; 
 	color: #34343;
@@ -61,7 +65,8 @@ h1, h2 {
 }
 
 .content-wrap{
-	width: 800px;
+	max-width: 800px;
+	width: 85%;
 	margin: 0 auto; 
 	padding: 35px 0;
 
@@ -81,3 +86,68 @@ header, h2{
 }
 
 
+footer{
+	background: #FFA69E;
+	text-align: center;
+}
+
+
+.contact-list{
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+
+
+}
+
+.contact-list a{
+	padding: 15px;
+	display: inline-block;
+}
+
+
+.page-header{
+	margin: ;
+	border: 0;
+	padding: 0;
+	padding-bottom: 0.5; 
+}
+
+.top-menu{
+	width: 800;
+	
+	background: #FFA69E;
+} 
+
+
+/* *************CV STUFF**************** */ 
+
+/* Work Experience */
+
+.job-item{
+	display: grid;
+	grid-template-columns: 2fr 3fr; 
+	column-gap: 35px;
+}
+
+.project-item{
+	display: grid;
+	grid-template-columns: 2fr 3fr; 
+	column-gap: 35px;
+}
+
+.education-item{
+	display: grid;
+	grid-template-columns: 2fr 3fr; 
+	column-gap: 35px;
+}
+
+.skills-list{
+	list-style-type: none;
+	padding: 0;
+	display: inline-flex;
+	
+
+
+}
